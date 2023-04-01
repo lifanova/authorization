@@ -10,11 +10,11 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Repository
 public class UserRepository {
-    private final Map<List<String>, List<Authorities>> userAuthoritiesList = new ConcurrentHashMap<>();
+    private final Map<String, List<Authorities>> userAuthoritiesList = new ConcurrentHashMap<>();
 
         public List<Authorities> getUserAuthorities(String user, String password) {
 
-        for (Map.Entry<List<String>, List<Authorities>> userAuthoritiesEntry : userAuthoritiesList.entrySet()) {
+        for (Map.Entry<String, List<Authorities>> userAuthoritiesEntry : userAuthoritiesList.entrySet()) {
 
             if ((userAuthoritiesEntry.getKey().contains(user)) && (userAuthoritiesEntry.getKey().contains(password))) {
                 return userAuthoritiesEntry.getValue();
