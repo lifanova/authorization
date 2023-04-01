@@ -10,13 +10,9 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Repository
 public class UserRepository {
-    final Map<List<String>, List<Authorities>> userAuthoritiesList = new ConcurrentHashMap<>();
+    private final Map<List<String>, List<Authorities>> userAuthoritiesList = new ConcurrentHashMap<>();
 
-//    public UserRepository(ConcurrentHashMap<List<String>, List<Authorities>> userAuthorities) {
-//        this.userAuthoritiesList = userAuthorities;
-//    }
-
-    public List<Authorities> getUserAuthorities(String user, String password) {
+        public List<Authorities> getUserAuthorities(String user, String password) {
 
         for (Map.Entry<List<String>, List<Authorities>> userAuthoritiesEntry : userAuthoritiesList.entrySet()) {
 
