@@ -32,6 +32,11 @@ public class UserRepository {
 
         users.add(new User("test1", "Qwerty1", authorities));
 
+        authorities = new ArrayList<>();
+        authorities.add(Authorities.READ);
+
+        users.add(new User("test2", "Qwerty2", authorities));
+
         return users;
     }
 
