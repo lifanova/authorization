@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  app:
+    image: app_docker:1.0
+    build:
+      ./
+    ports:
+      - 8080:8080
